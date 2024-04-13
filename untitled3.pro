@@ -14,13 +14,17 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     secondwindow.cpp \
-    thirdwindow.cpp
+    thirdwindow.cpp \
+    veiculo.cpp \
+    veiculorepository.cpp
 
 HEADERS += \
     firstwindow.h \
     mainwindow.h \
     secondwindow.h \
-    thirdwindow.h
+    thirdwindow.h \
+    veiculo.h \
+    veiculorepository.h
 
 FORMS += \
     firstwindow.ui \

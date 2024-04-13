@@ -22,18 +22,22 @@ class Ui_firstwindow
 public:
     QLabel *label;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
 
     void setupUi(QWidget *firstwindow)
     {
         if (firstwindow->objectName().isEmpty())
             firstwindow->setObjectName("firstwindow");
-        firstwindow->resize(216, 357);
+        firstwindow->resize(312, 588);
         label = new QLabel(firstwindow);
         label->setObjectName("label");
-        label->setGeometry(QRect(90, 10, 31, 16));
+        label->setGeometry(QRect(130, 10, 31, 16));
         pushButton = new QPushButton(firstwindow);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(130, 260, 71, 24));
+        pushButton->setGeometry(QRect(120, 550, 71, 24));
+        pushButton_2 = new QPushButton(firstwindow);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setGeometry(QRect(110, 430, 80, 24));
 
         retranslateUi(firstwindow);
 
@@ -45,6 +49,7 @@ public:
         firstwindow->setWindowTitle(QCoreApplication::translate("firstwindow", "Form", nullptr));
         label->setText(QCoreApplication::translate("firstwindow", "Tela 1", nullptr));
         pushButton->setText(QCoreApplication::translate("firstwindow", "Voltar", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("firstwindow", "Criar", nullptr));
     } // retranslateUi
 
 };
