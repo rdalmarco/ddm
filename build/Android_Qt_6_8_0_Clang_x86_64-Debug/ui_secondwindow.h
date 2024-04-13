@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +21,7 @@ class Ui_secondwindow
 {
 public:
     QLabel *label;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *secondwindow)
     {
@@ -28,7 +30,10 @@ public:
         secondwindow->resize(230, 469);
         label = new QLabel(secondwindow);
         label->setObjectName("label");
-        label->setGeometry(QRect(100, 10, 31, 16));
+        label->setGeometry(QRect(100, 10, 61, 16));
+        pushButton = new QPushButton(secondwindow);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(130, 350, 71, 24));
 
         retranslateUi(secondwindow);
 
@@ -39,6 +44,7 @@ public:
     {
         secondwindow->setWindowTitle(QCoreApplication::translate("secondwindow", "Form", nullptr));
         label->setText(QCoreApplication::translate("secondwindow", "Tela 2", nullptr));
+        pushButton->setText(QCoreApplication::translate("secondwindow", "Voltar", nullptr));
     } // retranslateUi
 
 };

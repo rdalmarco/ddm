@@ -33,22 +33,22 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(362, 600);
+        MainWindow->resize(296, 527);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         pushButton_1 = new QPushButton(centralwidget);
         pushButton_1->setObjectName("pushButton_1");
-        pushButton_1->setGeometry(QRect(40, 310, 80, 24));
+        pushButton_1->setGeometry(QRect(100, 190, 80, 24));
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(40, 350, 80, 24));
+        pushButton_2->setGeometry(QRect(100, 230, 80, 24));
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(40, 390, 80, 24));
+        pushButton_3->setGeometry(QRect(100, 270, 80, 24));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 362, 21));
+        menubar->setGeometry(QRect(0, 0, 296, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");

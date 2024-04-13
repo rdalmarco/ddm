@@ -15,6 +15,9 @@ public:
     explicit secondwindow(QWidget *parent = nullptr);
     ~secondwindow();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::secondwindow *ui;
 };

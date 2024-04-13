@@ -15,6 +15,9 @@ public:
     explicit thirdwindow(QWidget *parent = nullptr);
     ~thirdwindow();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::thirdwindow *ui;
 };

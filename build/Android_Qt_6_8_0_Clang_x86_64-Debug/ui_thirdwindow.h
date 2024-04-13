@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +21,7 @@ class Ui_thirdwindow
 {
 public:
     QLabel *label;
+    QPushButton *pushButton;
 
     void setupUi(QWidget *thirdwindow)
     {
@@ -28,7 +30,10 @@ public:
         thirdwindow->resize(245, 436);
         label = new QLabel(thirdwindow);
         label->setObjectName("label");
-        label->setGeometry(QRect(100, 10, 31, 16));
+        label->setGeometry(QRect(100, 10, 51, 16));
+        pushButton = new QPushButton(thirdwindow);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(140, 360, 71, 24));
 
         retranslateUi(thirdwindow);
 
@@ -39,6 +44,7 @@ public:
     {
         thirdwindow->setWindowTitle(QCoreApplication::translate("thirdwindow", "Form", nullptr));
         label->setText(QCoreApplication::translate("thirdwindow", "Tela 3", nullptr));
+        pushButton->setText(QCoreApplication::translate("thirdwindow", "Voltar", nullptr));
     } // retranslateUi
 
 };

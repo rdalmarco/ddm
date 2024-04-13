@@ -18,12 +18,25 @@
     <rect>
      <x>100</x>
      <y>10</y>
-     <width>31</width>
+     <width>51</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
     <string>Tela 3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>360</y>
+     <width>71</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Voltar</string>
    </property>
   </widget>
  </widget>
