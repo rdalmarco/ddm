@@ -30,19 +30,33 @@ public:
     {
         if (secondwindow->objectName().isEmpty())
             secondwindow->setObjectName("secondwindow");
-        secondwindow->resize(305, 566);
+        secondwindow->resize(340, 566);
         label = new QLabel(secondwindow);
         label->setObjectName("label");
-        label->setGeometry(QRect(130, 10, 61, 16));
+        label->setGeometry(QRect(150, 10, 81, 21));
+        QFont font;
+        font.setPointSize(18);
+        font.setBold(true);
+        label->setFont(font);
+        label->setTextFormat(Qt::PlainText);
         pushButton = new QPushButton(secondwindow);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(120, 530, 71, 24));
+        pushButton->setGeometry(QRect(130, 530, 71, 24));
+        QFont font1;
+        font1.setPointSize(14);
+        font1.setBold(true);
+        pushButton->setFont(font1);
         textBrowser = new QTextBrowser(secondwindow);
         textBrowser->setObjectName("textBrowser");
-        textBrowser->setGeometry(QRect(20, 30, 261, 451));
+        textBrowser->setGeometry(QRect(10, 50, 321, 401));
+        QFont font2;
+        font2.setPointSize(16);
+        font2.setBold(true);
+        textBrowser->setFont(font2);
         pushButton_2 = new QPushButton(secondwindow);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(120, 490, 80, 24));
+        pushButton_2->setGeometry(QRect(90, 470, 151, 41));
+        pushButton_2->setFont(font2);
 
         retranslateUi(secondwindow);
 
@@ -52,7 +66,7 @@ public:
     void retranslateUi(QWidget *secondwindow)
     {
         secondwindow->setWindowTitle(QCoreApplication::translate("secondwindow", "Form", nullptr));
-        label->setText(QCoreApplication::translate("secondwindow", "Tela 2", nullptr));
+        label->setText(QCoreApplication::translate("secondwindow", "Listar", nullptr));
         pushButton->setText(QCoreApplication::translate("secondwindow", "Voltar", nullptr));
         pushButton_2->setText(QCoreApplication::translate("secondwindow", "Listar", nullptr));
     } // retranslateUi

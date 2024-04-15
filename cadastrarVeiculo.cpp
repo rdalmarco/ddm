@@ -1,6 +1,7 @@
-#include <iostream>
-#include "firstwindow.h"
-#include "ui_firstwindow.h"
+#include <QWidget>
+#include <QMessageBox>
+#include "cadastrarVeiculo.h"
+#include "ui_cadastrarVeiculo.h"
 #include "mainwindow.h"
 #include "veiculorepository.h"
 
@@ -22,10 +23,18 @@ void firstwindow::on_pushButton_clicked()
     mainWindow->show();
 }
 
-void firstwindow::criarVeiculo(const std::string& placa, const std::string& modelo, int ano, float valor) {
+void firstwindow::limparCamposDaTela() {
+    ui->editPlaca->clear();
+    ui->editModelo->clear();
+    ui->editValor->clear();
+    ui->editAno->clear();
+}
+
+void firstwindow::criarVeiculo(const std::string& placa, const std::string& modelo, int ano, float valor, QWidget *parentWidget) {
     Veiculo novoVeiculo(placa, modelo, ano, valor);
 
    VeiculoRepository::getInstance().adicionarVeiculo(novoVeiculo);
+    QMessageBox::information(parentWidget, "Veículo Criado", "O veículo foi criado com sucesso.");
 }
 
 void firstwindow::pegarValores() {
@@ -34,23 +43,47 @@ void firstwindow::pegarValores() {
     int ano = obterAnoDaInterface();
     float valor = obterValorDaInterface();
 
-    criarVeiculo(placa, modelo, ano, valor);
+    criarVeiculo(placa, modelo, ano, valor, this);
+
+    limparCamposDaTela();
 }
 
 std::string firstwindow::obterPlacaDaInterface() {
-    return "ABC1234";
+
+    QLineEdit *editPlaca = ui -> editPlaca;
+
+    QString textoPlaca = editPlaca->text();
+
+    return textoPlaca.toStdString();
 }
 
 std::string firstwindow::obterModeloDaInterface() {
-    return "Sedan";
+
+    QLineEdit *editModelo = ui -> editModelo;
+
+    QString textoModelo = editModelo->text();
+
+    return textoModelo.toStdString();
 }
 
 int firstwindow::obterAnoDaInterface() {
-    return 2022; //
+
+    //* indica que editAno é um ponteiro apontando para um objeto do tipo QLineEdit
+    //ui -> editAno é um ponteiro para o widget editAno da tela, e estou atribuindo esse ponteiro a um ponteiro local chamado *editAno
+    QDateEdit *editAno = ui -> editAno;
+
+    QString textoAno = editAno->text();
+
+    return textoAno.toInt();
 }
 
 float firstwindow::obterValorDaInterface() {
-    return 35000.0; //
+
+    QLineEdit *editValor = ui -> editValor;
+
+    QString textoValor = editValor->text();
+
+    return textoValor.toFloat();
 }
 
 

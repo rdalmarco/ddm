@@ -1,5 +1,5 @@
-#ifndef THIRDWINDOW_H
-#define THIRDWINDOW_H
+#ifndef EXCLUIRVEICULO_H
+#define EXCLUIRVEICULO_H
 
 #include <QWidget>
 
@@ -18,8 +18,14 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::thirdwindow *ui;
+
+    void excluirVeiculo(QWidget *parentWidget);
+
+    std::string obterPlacaDaInterface();
 };
 
-#endif // THIRDWINDOW_H
+#endif // EXCLUIRVEICULO_H

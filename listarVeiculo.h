@@ -1,5 +1,5 @@
-#ifndef SECONDWINDOW_H
-#define SECONDWINDOW_H
+#ifndef LISTARVEICULO_H
+#define LISTARVEICULO_H
 
 #include <QWidget>
 
@@ -26,4 +26,4 @@ private:
     void exibirVeiculos();
 };
 
-#endif // SECONDWINDOW_H
+#endif // LISTARVEICULO_H

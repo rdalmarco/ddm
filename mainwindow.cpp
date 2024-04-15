@@ -1,8 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "firstwindow.h"
-#include "secondwindow.h"
-#include "thirdwindow.h"
+#include "cadastrarVeiculo.h"
+#include "listarVeiculo.h"
+#include "excluirVeiculo.h"
+#include "cadastrarmarca.h"
+#include "listarmarca.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -37,4 +39,17 @@ void MainWindow::on_pushButton_3_clicked()
 }
 
 
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    cadastrarmarca *cadastrarMarca = new cadastrarmarca();
+    cadastrarMarca->show();
+}
+
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    listarMarca *listarmarca = new listarMarca();
+    listarmarca->show();
+}
 

@@ -1,5 +1,5 @@
-#include "secondwindow.h"
-#include "ui_secondwindow.h"
+#include "listarVeiculo.h"
+#include "ui_listarVeiculo.h"
 #include "mainwindow.h"
 #include "veiculo.h"
 #include "veiculorepository.h"
@@ -27,6 +27,7 @@ void secondwindow::exibirVeiculos() {
 
     // Limpar qualquer conteúdo anterior
     ui->textBrowser->clear();
+    ui->textBrowser->setAlignment(Qt::AlignCenter);
 
 
 
@@ -36,7 +37,7 @@ void secondwindow::exibirVeiculos() {
         ui->textBrowser->append(QString::fromStdString(veiculo.getModelo()));
         ui->textBrowser->append(QString::number(veiculo.getAno()));
         ui->textBrowser->append(QString::number(veiculo.getValor()));
-        ui->textBrowser->append("---------------------");
+        ui->textBrowser->append("-----------------------------------------------");
     }
 }
 

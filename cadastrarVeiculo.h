@@ -1,5 +1,5 @@
-#ifndef FIRSTWINDOW_H
-#define FIRSTWINDOW_H
+#ifndef CADASTRARVEICULO_H
+#define CADASTRARVEICULO_H
 
 #include <QWidget>
 #include "veiculo.h"
@@ -23,8 +23,9 @@ private slots:
 
 private:
     Ui::firstwindow *ui;
-    void criarVeiculo(const std::string& placa, const std::string& modelo, int ano, float valor);
+    void criarVeiculo(const std::string& placa, const std::string& modelo, int ano, float valor, QWidget *parentWidget);
     void pegarValores();
+    void limparCamposDaTela();
 
     // Métodos para obter valores da interface
     std::string obterPlacaDaInterface();
@@ -33,4 +34,4 @@ private:
     float obterValorDaInterface();
 };
 
-#endif // FIRSTWINDOW_H
+#endif // CADASTRARVEICULO_H

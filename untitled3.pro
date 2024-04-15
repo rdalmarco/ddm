@@ -10,27 +10,37 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    firstwindow.cpp \
+    cadastrarVeiculo.cpp \
+    cadastrarmarca.cpp \
+    excluirVeiculo.cpp \
+    listarVeiculo.cpp \
+    listarmarca.cpp \
     main.cpp \
     mainwindow.cpp \
-    secondwindow.cpp \
-    thirdwindow.cpp \
+    marca.cpp \
+    marcarepository.cpp \
     veiculo.cpp \
     veiculorepository.cpp
 
 HEADERS += \
-    firstwindow.h \
+    cadastrarVeiculo.h \
+    cadastrarmarca.h \
+    excluirVeiculo.h \
+    listarVeiculo.h \
+    listarmarca.h \
     mainwindow.h \
-    secondwindow.h \
-    thirdwindow.h \
+    marca.h \
+    marcarepository.h \
     veiculo.h \
     veiculorepository.h
 
 FORMS += \
-    firstwindow.ui \
-    mainwindow.ui \
-    secondwindow.ui \
-    thirdwindow.ui
+    cadastrarVeiculo.ui \
+    cadastrarmarca.ui \
+    excluirVeiculo.ui \
+    listarVeiculo.ui \
+    listarmarca.ui \
+    mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

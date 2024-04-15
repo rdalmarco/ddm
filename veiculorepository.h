@@ -9,7 +9,7 @@ public:
     static VeiculoRepository& getInstance();
 
     void adicionarVeiculo(const Veiculo& veiculo);
-    void removerVeiculo(const std::string& placa);
+    void removerVeiculo(const Veiculo& veiculo);
     const std::vector<Veiculo>& getVeiculos() const;
 
 private:
