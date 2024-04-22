@@ -1,43 +1,43 @@
 #include <QWidget>
 #include <QMessageBox>
-#include "cadastrarVeiculo.h"
-#include "ui_cadastrarVeiculo.h"
+#include "cadastrarveiculo.h"
+#include "ui_cadastrarveiculo.h"
 #include "mainwindow.h"
 #include "veiculorepository.h"
 
-firstwindow::firstwindow(QWidget *parent)
+cadastrarveiculo::cadastrarveiculo(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::firstwindow)
+    , ui(new Ui::cadastrarveiculo)
 {
     ui->setupUi(this);
 }
 
-firstwindow::~firstwindow()
+cadastrarveiculo::~cadastrarveiculo()
 {
     delete ui;
 }
 
-void firstwindow::on_pushButton_clicked()
+void cadastrarveiculo::on_pushButton_clicked()
 {
     MainWindow *mainWindow = new MainWindow();
     mainWindow->show();
 }
 
-void firstwindow::limparCamposDaTela() {
+void cadastrarveiculo::limparCamposDaTela() {
     ui->editPlaca->clear();
     ui->editModelo->clear();
     ui->editValor->clear();
     ui->editAno->clear();
 }
 
-void firstwindow::criarVeiculo(const std::string& placa, const std::string& modelo, int ano, float valor, QWidget *parentWidget) {
+void cadastrarveiculo::criarVeiculo(const std::string& placa, const std::string& modelo, int ano, float valor, QWidget *parentWidget) {
     Veiculo novoVeiculo(placa, modelo, ano, valor);
 
    VeiculoRepository::getInstance().adicionarVeiculo(novoVeiculo);
     QMessageBox::information(parentWidget, "Veículo Criado", "O veículo foi criado com sucesso.");
 }
 
-void firstwindow::pegarValores() {
+void cadastrarveiculo::pegarValores() {
     std::string placa = obterPlacaDaInterface();
     std::string modelo = obterModeloDaInterface();
     int ano = obterAnoDaInterface();
@@ -48,7 +48,7 @@ void firstwindow::pegarValores() {
     limparCamposDaTela();
 }
 
-std::string firstwindow::obterPlacaDaInterface() {
+std::string cadastrarveiculo::obterPlacaDaInterface() {
 
     QLineEdit *editPlaca = ui -> editPlaca;
 
@@ -57,7 +57,7 @@ std::string firstwindow::obterPlacaDaInterface() {
     return textoPlaca.toStdString();
 }
 
-std::string firstwindow::obterModeloDaInterface() {
+std::string cadastrarveiculo::obterModeloDaInterface() {
 
     QLineEdit *editModelo = ui -> editModelo;
 
@@ -66,7 +66,7 @@ std::string firstwindow::obterModeloDaInterface() {
     return textoModelo.toStdString();
 }
 
-int firstwindow::obterAnoDaInterface() {
+int cadastrarveiculo::obterAnoDaInterface() {
 
     //* indica que editAno é um ponteiro apontando para um objeto do tipo QLineEdit
     //ui -> editAno é um ponteiro para o widget editAno da tela, e estou atribuindo esse ponteiro a um ponteiro local chamado *editAno
@@ -77,7 +77,7 @@ int firstwindow::obterAnoDaInterface() {
     return textoAno.toInt();
 }
 
-float firstwindow::obterValorDaInterface() {
+float cadastrarveiculo::obterValorDaInterface() {
 
     QLineEdit *editValor = ui -> editValor;
 
@@ -87,7 +87,7 @@ float firstwindow::obterValorDaInterface() {
 }
 
 
-void firstwindow::on_pushButton_2_clicked()
+void cadastrarveiculo::on_pushButton_2_clicked()
 {
     pegarValores();
 }

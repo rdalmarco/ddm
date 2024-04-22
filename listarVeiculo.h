@@ -4,16 +4,16 @@
 #include <QWidget>
 
 namespace Ui {
-class secondwindow;
+class listarveiculo;
 }
 
-class secondwindow : public QWidget
+class listarveiculo : public QWidget
 {
     Q_OBJECT
 
 public:
-      explicit secondwindow(QWidget *parent = nullptr);
-    ~secondwindow();
+      explicit listarveiculo(QWidget *parent = nullptr);
+    ~listarveiculo();
 
 private slots:
     void on_pushButton_clicked();
@@ -21,7 +21,7 @@ private slots:
     void on_pushButton_2_clicked();
 
 private:
-    Ui::secondwindow *ui;
+    Ui::listarveiculo *ui;
 
     void exibirVeiculos();
 };

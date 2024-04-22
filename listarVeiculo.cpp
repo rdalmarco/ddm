@@ -4,25 +4,25 @@
 #include "veiculo.h"
 #include "veiculorepository.h"
 
-secondwindow::secondwindow(QWidget *parent)
+listarveiculo::listarveiculo(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::secondwindow)
+    , ui(new Ui::listarveiculo)
 {
     ui->setupUi(this);
 }
 
-secondwindow::~secondwindow()
+listarveiculo::~listarveiculo()
 {
     delete ui;
 }
 
-void secondwindow::on_pushButton_clicked()
+void listarveiculo::on_pushButton_clicked()
 {
     MainWindow *mainWindow = new MainWindow();
     mainWindow->show();
 }
 
-void secondwindow::exibirVeiculos() {
+void listarveiculo::exibirVeiculos() {
     const std::vector<Veiculo>& veiculos = VeiculoRepository::getInstance().getVeiculos();
 
     // Limpar qualquer conteúdo anterior
@@ -42,7 +42,7 @@ void secondwindow::exibirVeiculos() {
 }
 
 
-void secondwindow::on_pushButton_2_clicked()
+void listarveiculo::on_pushButton_2_clicked()
 {
     exibirVeiculos();
 }

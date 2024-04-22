@@ -6,25 +6,25 @@
 #include "veiculo.h"
 #include "veiculorepository.h"
 
-thirdwindow::thirdwindow(QWidget *parent)
+excluirveiculo::excluirveiculo(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::thirdwindow)
+    , ui(new Ui::excluirveiculo)
 {
     ui->setupUi(this);
 }
 
-thirdwindow::~thirdwindow()
+excluirveiculo::~excluirveiculo()
 {
     delete ui;
 }
 
-void thirdwindow::on_pushButton_clicked()
+void excluirveiculo::on_pushButton_clicked()
 {
     MainWindow *mainWindow = new MainWindow();
     mainWindow->show();
 }
 
-std::string thirdwindow::obterPlacaDaInterface() {
+std::string excluirveiculo::obterPlacaDaInterface() {
 
     QLineEdit *editPlaca = ui -> editPlaca;
 
@@ -34,7 +34,7 @@ std::string thirdwindow::obterPlacaDaInterface() {
 }
 
 
-void thirdwindow::excluirVeiculo(QWidget *parentWidget) {
+void excluirveiculo::excluirVeiculo(QWidget *parentWidget) {
     std::string placa = obterPlacaDaInterface();
 
     const std::vector<Veiculo>& veiculos = VeiculoRepository::getInstance().getVeiculos();
@@ -52,7 +52,7 @@ void thirdwindow::excluirVeiculo(QWidget *parentWidget) {
 }
 
 
-void thirdwindow::on_pushButton_2_clicked()
+void excluirveiculo::on_pushButton_2_clicked()
 {
     excluirVeiculo(this);
 }

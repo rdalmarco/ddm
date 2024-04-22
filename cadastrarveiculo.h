@@ -5,16 +5,16 @@
 #include "veiculo.h"
 
 namespace Ui {
-class firstwindow;
+class cadastrarveiculo;
 }
 
-class firstwindow : public QWidget
+class cadastrarveiculo : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit firstwindow(QWidget *parent = nullptr);
-    ~firstwindow();
+    explicit cadastrarveiculo(QWidget *parent = nullptr);
+    ~cadastrarveiculo();
 
 private slots:
     void on_pushButton_clicked();
@@ -22,7 +22,7 @@ private slots:
     void on_pushButton_2_clicked();
 
 private:
-    Ui::firstwindow *ui;
+    Ui::cadastrarveiculo *ui;
     void criarVeiculo(const std::string& placa, const std::string& modelo, int ano, float valor, QWidget *parentWidget);
     void pegarValores();
     void limparCamposDaTela();

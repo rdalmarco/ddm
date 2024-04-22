@@ -18,7 +18,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_secondwindow
+class Ui_listarveiculo
 {
 public:
     QLabel *label;
@@ -26,12 +26,12 @@ public:
     QTextBrowser *textBrowser;
     QPushButton *pushButton_2;
 
-    void setupUi(QWidget *secondwindow)
+    void setupUi(QWidget *listarveiculo)
     {
-        if (secondwindow->objectName().isEmpty())
-            secondwindow->setObjectName("secondwindow");
-        secondwindow->resize(340, 566);
-        label = new QLabel(secondwindow);
+        if (listarveiculo->objectName().isEmpty())
+            listarveiculo->setObjectName("listarveiculo");
+        listarveiculo->resize(340, 566);
+        label = new QLabel(listarveiculo);
         label->setObjectName("label");
         label->setGeometry(QRect(110, 10, 181, 21));
         QFont font;
@@ -39,42 +39,42 @@ public:
         font.setBold(true);
         label->setFont(font);
         label->setTextFormat(Qt::PlainText);
-        pushButton = new QPushButton(secondwindow);
+        pushButton = new QPushButton(listarveiculo);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(130, 530, 71, 24));
         QFont font1;
         font1.setPointSize(14);
         font1.setBold(true);
         pushButton->setFont(font1);
-        textBrowser = new QTextBrowser(secondwindow);
+        textBrowser = new QTextBrowser(listarveiculo);
         textBrowser->setObjectName("textBrowser");
         textBrowser->setGeometry(QRect(10, 50, 321, 401));
         QFont font2;
         font2.setPointSize(16);
         font2.setBold(true);
         textBrowser->setFont(font2);
-        pushButton_2 = new QPushButton(secondwindow);
+        pushButton_2 = new QPushButton(listarveiculo);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(90, 470, 151, 41));
         pushButton_2->setFont(font2);
 
-        retranslateUi(secondwindow);
+        retranslateUi(listarveiculo);
 
-        QMetaObject::connectSlotsByName(secondwindow);
+        QMetaObject::connectSlotsByName(listarveiculo);
     } // setupUi
 
-    void retranslateUi(QWidget *secondwindow)
+    void retranslateUi(QWidget *listarveiculo)
     {
-        secondwindow->setWindowTitle(QCoreApplication::translate("secondwindow", "Form", nullptr));
-        label->setText(QCoreApplication::translate("secondwindow", "Listar Veiculos", nullptr));
-        pushButton->setText(QCoreApplication::translate("secondwindow", "Voltar", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("secondwindow", "Listar", nullptr));
+        listarveiculo->setWindowTitle(QCoreApplication::translate("listarveiculo", "Form", nullptr));
+        label->setText(QCoreApplication::translate("listarveiculo", "Listar Veiculos", nullptr));
+        pushButton->setText(QCoreApplication::translate("listarveiculo", "Voltar", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("listarveiculo", "Listar", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class secondwindow: public Ui_secondwindow {};
+    class listarveiculo: public Ui_listarveiculo {};
 } // namespace Ui
 
 QT_END_NAMESPACE

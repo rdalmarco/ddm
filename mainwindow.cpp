@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "cadastrarVeiculo.h"
+#include "cadastrarveiculo.h"
 #include "listarVeiculo.h"
 #include "excluirVeiculo.h"
 #include "cadastrarmarca.h"
@@ -21,21 +21,21 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_1_clicked()
 {
-    firstwindow *firstWindow = new firstwindow();
-    firstWindow->show();
+    cadastrarveiculo *cadastrarVeiculo = new cadastrarveiculo();
+    cadastrarVeiculo->show();
 }
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    secondwindow *secondWindow = new secondwindow();
-    secondWindow->show();
+    listarveiculo *listarVeiculo = new listarveiculo();
+    listarVeiculo->show();
 }
 
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    thirdwindow *thirdWindow = new thirdwindow();
-    thirdWindow->show();
+    excluirveiculo *excluirVeiculo = new excluirveiculo();
+    excluirVeiculo->show();
 }
 
 

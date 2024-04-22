@@ -18,7 +18,7 @@
 
 QT_BEGIN_NAMESPACE
 
-class Ui_thirdwindow
+class Ui_excluirveiculo
 {
 public:
     QLabel *label;
@@ -27,59 +27,59 @@ public:
     QLineEdit *editPlaca;
     QLabel *label_2;
 
-    void setupUi(QWidget *thirdwindow)
+    void setupUi(QWidget *excluirveiculo)
     {
-        if (thirdwindow->objectName().isEmpty())
-            thirdwindow->setObjectName("thirdwindow");
-        thirdwindow->resize(340, 566);
-        label = new QLabel(thirdwindow);
+        if (excluirveiculo->objectName().isEmpty())
+            excluirveiculo->setObjectName("excluirveiculo");
+        excluirveiculo->resize(340, 566);
+        label = new QLabel(excluirveiculo);
         label->setObjectName("label");
         label->setGeometry(QRect(100, 10, 171, 31));
         QFont font;
         font.setPointSize(18);
         font.setBold(true);
         label->setFont(font);
-        pushButton = new QPushButton(thirdwindow);
+        pushButton = new QPushButton(excluirveiculo);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(130, 530, 71, 24));
         QFont font1;
         font1.setPointSize(14);
         font1.setBold(true);
         pushButton->setFont(font1);
-        pushButton_2 = new QPushButton(thirdwindow);
+        pushButton_2 = new QPushButton(excluirveiculo);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setGeometry(QRect(90, 280, 151, 41));
         QFont font2;
         font2.setPointSize(16);
         font2.setBold(true);
         pushButton_2->setFont(font2);
-        editPlaca = new QLineEdit(thirdwindow);
+        editPlaca = new QLineEdit(excluirveiculo);
         editPlaca->setObjectName("editPlaca");
         editPlaca->setGeometry(QRect(90, 230, 151, 31));
         editPlaca->setInputMethodHints(Qt::ImhHiddenText);
-        label_2 = new QLabel(thirdwindow);
+        label_2 = new QLabel(excluirveiculo);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(90, 200, 49, 16));
         label_2->setFont(font1);
 
-        retranslateUi(thirdwindow);
+        retranslateUi(excluirveiculo);
 
-        QMetaObject::connectSlotsByName(thirdwindow);
+        QMetaObject::connectSlotsByName(excluirveiculo);
     } // setupUi
 
-    void retranslateUi(QWidget *thirdwindow)
+    void retranslateUi(QWidget *excluirveiculo)
     {
-        thirdwindow->setWindowTitle(QCoreApplication::translate("thirdwindow", "Form", nullptr));
-        label->setText(QCoreApplication::translate("thirdwindow", "Excluir Veiculo", nullptr));
-        pushButton->setText(QCoreApplication::translate("thirdwindow", "Voltar", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("thirdwindow", "Excluir", nullptr));
-        label_2->setText(QCoreApplication::translate("thirdwindow", "Placa", nullptr));
+        excluirveiculo->setWindowTitle(QCoreApplication::translate("excluirveiculo", "Form", nullptr));
+        label->setText(QCoreApplication::translate("excluirveiculo", "Excluir Veiculo", nullptr));
+        pushButton->setText(QCoreApplication::translate("excluirveiculo", "Voltar", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("excluirveiculo", "Excluir", nullptr));
+        label_2->setText(QCoreApplication::translate("excluirveiculo", "Placa", nullptr));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class thirdwindow: public Ui_thirdwindow {};
+    class excluirveiculo: public Ui_excluirveiculo {};
 } // namespace Ui
 
 QT_END_NAMESPACE

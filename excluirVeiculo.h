@@ -4,16 +4,16 @@
 #include <QWidget>
 
 namespace Ui {
-class thirdwindow;
+class excluirveiculo;
 }
 
-class thirdwindow : public QWidget
+class excluirveiculo : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit thirdwindow(QWidget *parent = nullptr);
-    ~thirdwindow();
+    explicit excluirveiculo(QWidget *parent = nullptr);
+    ~excluirveiculo();
 
 private slots:
     void on_pushButton_clicked();
@@ -21,7 +21,7 @@ private slots:
     void on_pushButton_2_clicked();
 
 private:
-    Ui::thirdwindow *ui;
+    Ui::excluirveiculo *ui;
 
     void excluirVeiculo(QWidget *parentWidget);
 

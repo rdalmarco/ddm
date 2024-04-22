@@ -10,8 +10,8 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    cadastrarVeiculo.cpp \
     cadastrarmarca.cpp \
+    cadastrarveiculo.cpp \
     excluirVeiculo.cpp \
     listarVeiculo.cpp \
     listarmarca.cpp \
@@ -23,8 +23,8 @@ SOURCES += \
     veiculorepository.cpp
 
 HEADERS += \
-    cadastrarVeiculo.h \
     cadastrarmarca.h \
+    cadastrarveiculo.h \
     excluirVeiculo.h \
     listarVeiculo.h \
     listarmarca.h \
@@ -35,8 +35,8 @@ HEADERS += \
     veiculorepository.h
 
 FORMS += \
-    cadastrarVeiculo.ui \
     cadastrarmarca.ui \
+    cadastrarveiculo.ui \
     excluirVeiculo.ui \
     listarVeiculo.ui \
     listarmarca.ui \
